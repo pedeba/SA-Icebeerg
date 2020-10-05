@@ -49,7 +49,3 @@ function logar() {
         }     
     })
 }
-function dados(){
-    let userlog=JSON.parse(localStorage.getItem("pessoalogada"))
-    mostraDados.innerHTML=`Nome: ${userlog.nome} <br> Usuario: ${userlog.usuario} `
-}
