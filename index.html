@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerencie seus Projetos</title>
+    <link rel="stylesheet" href="style/index.css">
+</head>
+<body>
+    <nav class="menu">
+        <div class="container">
+            <h1>Nome de SA</h1>
+            <div class="user dropdown" id="dropdown">
+                <div id="usuario" onclick="openDados()">
+                    <img src="img/user.svg" alt="user">
+                    <p class="usuario-logado" id="usuario-logado"></p>
+                </div>
+                <ul class="dropdown-menu" id="dropdownmenu">
+                    <li><a href="produtos.html">Meus Produtos</a></li>
+                    <li><a href="dados.html">Dados</a></li>
+                    <li onclick="sair()"><a href="login.html">Sair</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="cabeca">
+        <div class="container cabeca-h1">
+            <h1>Cervejas Artesanais</h1>
+            <p>Anuncie e busque cervejas de maneira prática.</p>
+        </div>  
+    </section>
+
+    <section class="container">
+        <div class="projetos">
+            <p>Nenhuma cerveja foi anunciada.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>-Situação de Aprendizagem</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

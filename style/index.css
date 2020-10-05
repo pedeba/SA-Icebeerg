@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.user img {
+    width: 30px;
+    float: left;
+    margin-top: -1px;
+}
+
+.user p{
+    color: white;
+    float: right;
+    margin-top: 0px;
+    margin-left: 5px;
+    padding: 5px;
+}
+
+.user p.esconde{
+    display: none;
+}
+
+.menu {
+    background: #261E07;
+    padding: 20px 0;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.493);
+}
+
+
+.menu h1{
+    font-family: Arial, Helvetica, sans-serif;
+    float: left;
+    color: white;
+    margin-top: 3px;
+}
+
+.user {
+    float: right;
+    background: #31270a;
+    padding: 5px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.493);
+}
+
+.produtos-btn{
+    float: right;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.container::after, .container::before{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.cabeca{
+    height: 250px;
+    background: url(../img/beer.jpg), no-repeat, center;
+    background-size: cover;
+}
+
+.cabeca-h1{
+    text-align: center;
+}
+
+.cabeca-h1 h1 {
+    font-size: 60px;
+    font-family: monospace;
+    color: white;
+    margin-top: 60px;
+}
+
+.cabeca-h1 p{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.cabeca-h1 p::before, .cabeca-h1 p::after{
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: white;
+    margin: 10px auto;
+
+}
+
+.projetos {
+    height: 600px;
+    margin-top: 60px;
+    background: #f7f7f7;
+    overflow-y: scroll;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.493);
+}
+
+.projetos::-webkit-scrollbar{
+    width: 18px;
+}
+
+.projetos::-webkit-scrollbar-thumb{
+    background: #261E07;
+    border-right: 6px solid #8C793F;
+}
+
+.footer {
+    background: #261E07;
+    margin-top: 60px;
+    padding: 20px 0;
+}
+
+.footer p{
+    color: white;
+    font-family: monospace;
+    font-size: 16px;
+}
+
+.projetos p {
+    font-size: 25px;
+    text-align: center;
+    font-family: monospace;
+    color: #261E07;
+}
+
+.dropdown {
+    position: relative;
+    height: 35px;
+}
+
+.dropdown-menu{
+    position: absolute;
+    background: #F39B4D;
+    width: 200px;
+    padding: 5px;
+    top: 35px;
+    left: -78px;
+    border: 2px solid #261E07;
+}
+
+
+
+.dropdown-menu li{
+    list-style: none;
+    text-align: center;
+    border-top: 2px solid #eb862e;
+    padding: 5px 0;
+}
+.dropdown-menu li:last-child{
+    border-bottom: 2px solid #eb862e;
+}
+
+.dropdown-menu li a{
+    text-decoration: none;
+    color: #261E07;
+    font-family: monospace;
+    font-size: 20px;
+}
+
+.dropdown-menu li a:hover{
+    color: white;
+}
+
+
+
+.dropdown-menu::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -10px;
+    border-bottom: 10px solid #F39B4D;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    right: 90px;
+}
+
+.dropdown .dropdown-menu {
+    display: none;
+}
+
+.dropdown {
+    cursor: pointer;
+}
+
+.dropdown:hover .dropdown-menu{
+    cursor: pointer;
+    display: block;
+    animation: show-up .3s forwards;
+}
+
+
+@keyframes show-up{
+    from {
+        opacity: 0;
+        transform: translate3d(0,-25px,0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+

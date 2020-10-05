@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efetuar Login</title>
+    <link rel="stylesheet" href="./style/logingeral.css">
+</head>
+<body>
+    <main class="loginbg">
+        <div class="loginc">
+           <div class="login">
+            <p class="semlogin">Ainda não possui login?<a href="registro.html">Cadastre-se</a></p>
+            <h1>Fazer Login</h1>
+            <div id="msgerro"></div>
+            <input class="grid"type="text" placeholder="Usuário" id="usuario" >
+            <input class="grid"type="password" name="" placeholder="Senha" id="senha" >
+            <p class="check"><input type="checkbox" name="" id="checkbox">Mantenha-me conectado</p>
+            <a><button class="grid btn"type="submit" onclick="logar()">Entrar</button></a>
+           <a href="" class="esqueceu"><p>Esqueceu sua senha?</p></a>
+        </div>
+    </main>
+
+
+    <script src="./js/login.js"></script>
+</body>
+</html>

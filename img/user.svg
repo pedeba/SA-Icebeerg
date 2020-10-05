@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="57" height="56" viewBox="0 0 57 56">
+  <g id="foto_suario" data-name="foto suario" transform="translate(-1280 -16)">
+    <path id="Gender_Neutral_User_icon-icons.com_55902_1_" data-name="Gender_Neutral_User_icon-icons.com_55902 (1)" d="M23.01,5C16.454,5,11.1,10.72,11.1,17.727A13.031,13.031,0,0,0,16.366,28.3,18.286,18.286,0,0,0,6,45H9.4c0-8.056,6.072-14.545,13.608-14.545S36.619,36.944,36.619,45h3.4A18.286,18.286,0,0,0,29.655,28.3a13.031,13.031,0,0,0,5.263-10.568C34.918,10.72,29.566,5,23.01,5Zm0,3.636a8.786,8.786,0,0,1,8.505,9.091,8.786,8.786,0,0,1-8.505,9.091,8.786,8.786,0,0,1-8.505-9.091A8.786,8.786,0,0,1,23.01,8.636Z" transform="translate(1285 19)" fill="#fff"/>
+    <g id="Elipse_1" data-name="Elipse 1" transform="translate(1280 16)" fill="none" stroke="#fff" stroke-width="3">
+      <ellipse cx="28.5" cy="28" rx="28.5" ry="28" stroke="none"/>
+      <ellipse cx="28.5" cy="28" rx="27" ry="26.5" fill="none"/>
+    </g>
+  </g>
+</svg>
