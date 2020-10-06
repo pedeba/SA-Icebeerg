@@ -44,7 +44,7 @@ img {
     float: left;
     position: absolute;
     top: -25px;
-    left: 112px;
+    left: 115px;
 }
 
 .user {
@@ -218,23 +218,6 @@ img {
         transform: translate3d(0,0,0);
     }
 }
-.meusDados {
-    height: 600px;
-    margin-top: 60px;
-    background: #f7f7f7;
-    overflow-y: scroll;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.493);
-    font-size: 25px;
-    text-align: center;
-    font-family: monospace;
-    color: #261E07;
-}
 
-.meusDados:-webkit-scrollbar{
-    width: 18px;
-}
 
-.meusDados:-webkit-scrollbar-thumb{
-    background: #261E07;
-    border-right: 6px solid #8C793F;
-}
+

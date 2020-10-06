@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dados</title>
     <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/dados.css">
 </head>
 <body>
     <nav class="menu">
@@ -24,23 +25,30 @@
             </div>
         </div>
     </nav>
- 
-    <div id="meusDados">
+  
+    <div class="titulo-secao">
+        <div class="container">
+            <h2>SEUS DADOS</h2>
+        </div>
+    </div>
+  
+    <div id="meusDados" class="container">
     <div id="mostraDados">
 
     </div>
     <form>
-        <p>Editar meus dados</p>
-        <input type="text" placeholder="Nome completo" id="nomeEdit" autocomplete="off"> <br>
-        <br>
-        <input type="text" placeholder="Usuario" id="userEdit" autocomplete="off"> <br>
-        <br>
-        <input type="password" placeholder="Nova senha" id="pass1Edit" > <br>
-        <br>
-        <input type="password" placeholder="Confirmar senha" id="pass2Edit"> <br>
-        <br>
-        <button onclick="editarDados()" type="button">Editar Dados</button>
-        <button onclick="editarSenha()" type="button">Trocar Senha</button>
+        <h2>Editar dados</h2>
+        <p id="msgerro">msgerro</p>
+        <input type="text" placeholder="Nome completo" id="nomeEdit" autocomplete="off"> 
+     
+        <input type="text" placeholder="Usuario" id="userEdit" autocomplete="off"> 
+       
+        <input type="password" placeholder="Nova senha" id="pass1Edit" > 
+       
+        <input type="password" placeholder="Confirmar senha" id="pass2Edit"> 
+       
+        <button onclick="editarDados()" type="button" class="dados-btn">Trocar Dados</button>
+        <button onclick="editarSenha()" type="button" class="dados-btn">Trocar Senha</button>
       </form>
     </div>
       <footer class="footer">

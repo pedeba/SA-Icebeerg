@@ -1,0 +1,77 @@
+#meusDados{
+    padding: 30px 0;
+    margin-top: 60px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.493);
+    font-size: 25px;
+    text-align: center;
+    font-family: monospace;
+    color: #261E07;
+    position: relative;
+    
+    
+}
+#meusDados input{
+    font-size: 40px;
+    font-family: monospace;
+    padding: 5px;
+    outline: none;
+    border: 3px solid #261E07;
+    background: none;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+#meusDados form h2 {
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-size: 60px;
+    margin-bottom: 0;
+}
+
+.titulo-secao {
+    background: #F39B4D;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-family: monospace;
+    letter-spacing: .1em;
+    border-bottom: 3px solid #261E07;
+    padding:25px 0;
+}
+
+
+
+
+#meusDados button {
+    -webkit-border-radius: 17px;
+    -moz-border-radius: 17px;
+    border-radius: 17px;
+    color: #FFFFFF;
+    font-family: monospace;
+    font-size: 29px;
+    font-weight: 100;
+    padding: 20px;
+    background-color: #261E07;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.493);
+    outline: none;
+ }
+
+#mostraDados {
+    font-size: 30px;
+}
+
+#meusDados button:hover{
+   background: #F39B4D;
+   transition: 0.2s;
+}
+
+#msgerro {
+    color: red;
+    opacity: 0;
+}

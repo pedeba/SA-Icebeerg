@@ -4,11 +4,12 @@ let nomeEditInput = document.getElementById("nomeEdit")
 let userEditInput = document.getElementById("userEdit")
 let pass1EditInput = document.getElementById("pass1Edit")
 let pass2EditInput = document.getElementById("pass2Edit")
-mostraDados.innerHTML=`Nome: ${userlog.nome} <br> Usuario: ${userlog.usuario} `
+let msgerro = document.getElementById("msgerro")
+mostraDados.innerHTML=`Nome: ${userlog.nome} <br> Usuário: ${userlog.usuario} `
 
 function editarDados(){
     if (!nomeEditInput.value && !userEditInput.value){
-        alert("Você não alterou nenhum campo.")
+        msgerro.innerText = 'Você preencheu nenhum campo.'
     } else {
         usuarios.forEach((user)=>{
             if(user.usuario == userlog.usuario){
@@ -23,14 +24,16 @@ function editarDados(){
             }
         })
         attLocalStorage()
+        window.location.reload()  
     }
 }
 
 function editarSenha() {
     if(!pass1EditInput.value || !pass2EditInput.value){
-        alert("Não deixe Campos vazios!")
+        msgerro.innerText = 'Você não preencheu todos os campos.'
+        msgerro.style.opacity='1'
     } else if (pass1EditInput.value !== pass2EditInput.value){
-        alert("As senhas estão diferentes")
+        msgerro.innerText = 'As senhas estão diferentes.'
     } else {
         usuarios.forEach((user)=>{
             if(user.usuario == userlog.usuario){
@@ -38,13 +41,17 @@ function editarSenha() {
                 userlog.senha = pass1EditInput.value
             }
         })
+        msgerro.innerText = 'Senha alterada com sucesso!'
+        msgerro.style.color = 'yellowgreen'
+        msgerro.style.opacity = '1'
+        pass1EditInput.value = ''
+        pass2EditInput.value = ''
+        attLocalStorage()
     }
-    alert("Senha alterada com sucesso!")
-    attLocalStorage()
+    
 }
 
 function attLocalStorage(){
     localStorage.users = JSON.stringify(usuarios)
-    localStorage.pessoalogada = JSON.stringify(userlog)
-    window.location.reload()      
+    localStorage.pessoalogada = JSON.stringify(userlog)  
 }
