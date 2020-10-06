@@ -9,7 +9,8 @@ mostraDados.innerHTML=`Nome: ${userlog.nome} <br> Usuário: ${userlog.usuario} `
 
 function editarDados(){
     if (!nomeEditInput.value && !userEditInput.value){
-        msgerro.innerText = 'Você preencheu nenhum campo.'
+        msgerro.innerText = 'Nenhum campo foi preenchido.'
+        msgerro.style.opacity = '1'
     } else {
         usuarios.forEach((user)=>{
             if(user.usuario == userlog.usuario){
