@@ -73,6 +73,7 @@ img {
     height: 250px;
     background: url(../img/beer.jpg), no-repeat, center;
     background-size: cover;
+    border-bottom: 3px solid #261E07;
 }
 
 .cabeca-h1{
