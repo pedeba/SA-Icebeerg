@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Cerveja</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center mt-3">Adicionar Cerveja</h2>
+
+        <form>
+            <div class="form-group">
+                <input class="form-control" type="text" placeholder="Nome da Cerveja">
+            </div>
+
+            <div class="form-group">
+                <select class="form-control">
+                    <option>Tipo da Cerveja</option>
+                    <option value="Larger">Larger</option>
+                    <option value="Ales">Ales</option>
+                    <option value="Lambics">Lambics</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <textarea class="form-control" rows="3" placeholder="Descrição"></textarea>
+            </div>
+            
+            <div class="text-center">
+                <button type="button" class="btn btn-outline-dark">Adicionar</button>
+            </div>
+          </form>
+
+          <table class="table mt-4">
+            <thead>
+              <tr>
+                <th scope="col">Nº</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Descrição</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Larger Beer</td>
+                <td>Larger</td>
+                <td>Cerveja fermentada e armazenada em baixas temperaturas. A fermentação da cerveja é feita pela levedura Saccharomyces pastorianus.</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Ales Beer</td>
+                <td>Ales</td>
+                <td>Cerveja produzida a partir de cevada maltada usando uma levedura que trabalha melhor em temperaturas mais elevadas.</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Lambics Beer</td>
+                <td>Lambics</td>
+                <td>Cerveja fabricado tradicionalmente pela região de Pajottenland, pela cervejaria e museu Brasserie Cantillon.</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</body>
+</html>
