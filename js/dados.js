@@ -6,10 +6,12 @@ let pass1EditInput = document.getElementById("pass1Edit")
 let pass2EditInput = document.getElementById("pass2Edit")
 let msgerro = document.getElementById("msgerro")
 mostraDados.innerHTML=`Nome: ${userlog.nome} <br> Usuário: ${userlog.usuario} `
+nomeEditInput.value = userlog.nome
+userEditInput.value = userlog.usuario
 
 function editarDados(){
     if (!nomeEditInput.value && !userEditInput.value){
-        msgerro.innerText = 'Nenhum campo foi preenchido.'
+        msgerro.innerText = 'Você preencheu nenhum campo.'
         msgerro.style.opacity = '1'
     } else {
         usuarios.forEach((user)=>{

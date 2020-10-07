@@ -1,0 +1,62 @@
+input, select, button, textarea{
+    display: block;
+    font-size: 40px;
+    padding: 5px;
+    font-family: monospace;
+    color: #261E07;
+    background: none;
+    outline: none;
+    border-style: none;
+    border: 3px solid #261E07;
+    border-radius: 8px;
+}
+
+.add-cerv input{
+    width: 630px;
+    float: left;
+}
+
+.add-cerv select{
+    width: 630px;
+    float: right;
+    margin-bottom: 40px;
+
+}
+
+.add-cerv textarea{
+    width: 1300px;
+}
+
+.add-cerv button {
+    -webkit-border-radius: 17px;
+    -moz-border-radius: 17px;
+    border-radius: 17px;
+    color: #FFFFFF;
+    font-family: monospace;
+    font-size: 29px;
+    font-weight: 100;
+    padding: 20px;
+    background-color: #261E07;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.493);
+    margin: 40px auto;
+    display: block;
+}
+
+.add-cerv button:hover {
+    background: #F39B4D;
+    transition: 0.2s;
+}
+
+.text-center {
+    text-align: center;
+    font-size: 60px;
+    margin: 40px 0;
+    font-family: monospace;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+

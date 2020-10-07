@@ -1,7 +1,6 @@
 #meusDados{
     padding: 30px 0;
-    margin-top: 60px;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.493);
+    margin-top: 25px;
     font-size: 25px;
     text-align: center;
     font-family: monospace;
@@ -19,14 +18,16 @@
     background: none;
     display: block;
     margin: 0 auto;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    width: 630px;
+    border-radius: 8px;
 }
 
 #meusDados form h2 {
     text-transform: uppercase;
     letter-spacing: .1em;
     font-size: 60px;
-    margin-bottom: 0;
+    margin-bottom: 30px;
 }
 
 .titulo-secao {
@@ -75,4 +76,12 @@
     color: red;
     opacity: 0;
     font-size: 20px;
+}
+
+.editar-dados {
+    float: left;
+}
+
+.editar-senha{
+    float: right;
 }

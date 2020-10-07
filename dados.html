@@ -18,7 +18,7 @@
                 </div>
                 <ul class="dropdown-menu" id="dropdownmenu">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="produtos.html">Meus Produtos</a></li>
+                    <li><a href="adicionar-cerveja.html">Meus Produtos</a></li>
                     <li><a href="dados.html">Dados</a></li>
                     <li onclick="sair()"><a href="login.html">Sair</a></li>
                 </ul>
@@ -37,18 +37,25 @@
 
     </div>
     <form>
-        <h2>Editar dados</h2>
+        
         <p id="msgerro">msgerro</p>
-        <input type="text" placeholder="Nome completo" id="nomeEdit" autocomplete="off"> 
+        <div class="editar-dados">
+            <h2>Editar dados</h2>
+            <input type="text" placeholder="Nome completo" id="nomeEdit" autocomplete="off"> 
      
-        <input type="text" placeholder="Usuario" id="userEdit" autocomplete="off"> 
+            <input type="text" placeholder="Usuario" id="userEdit" autocomplete="off"> 
+            <button onclick="editarDados()" type="button" class="dados-btn">Atualizar Dados</button>
+        </div>
+
+        <div class="editar-senha">
+            <h2>Editar senha</h2>
+            <input type="password" placeholder="Nova senha" id="pass1Edit" > 
        
-        <input type="password" placeholder="Nova senha" id="pass1Edit" > 
-       
-        <input type="password" placeholder="Confirmar senha" id="pass2Edit"> 
-       
-        <button onclick="editarDados()" type="button" class="dados-btn">Trocar Dados</button>
-        <button onclick="editarSenha()" type="button" class="dados-btn">Trocar Senha</button>
+            <input type="password" placeholder="Confirmar senha" id="pass2Edit"> 
+           
+            
+            <button onclick="editarSenha()" type="button" class="dados-btn">Atualizar Senha</button>
+        </div>
       </form>
     </div>
       <footer class="footer">
