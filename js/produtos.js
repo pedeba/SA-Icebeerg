@@ -10,6 +10,9 @@ function addCerv(){
         alert("Insira todas as informações")
     } else {
         cadastrarCerv(nomeCerv.value, tipoCerv.value, descricao.value)
+        nomeCerv.value = ''
+        tipoCerv.value = 'Tipo da Cerveja'
+        descricao.value = ''
     }
 }
 function cadastrarCerv(nome, tipo, descricao){
@@ -21,7 +24,6 @@ function cadastrarCerv(nome, tipo, descricao){
     })
 }
 function addLocalSorage(user, novoProduto){
-   let todosProdutos
    let produtosUser
    if(!user.produtos){
        produtosUser = []
@@ -32,12 +34,16 @@ function addLocalSorage(user, novoProduto){
    user.produtos = produtosUser
    localStorage.users = JSON.stringify(usuarios)
    localStorage.pessoalogada = JSON.stringify(user)
-   if(!localStorage.produtos) {
-       todosProdutos = []
-   } else {
-       todosProdutos = JSON.parse(localStorage.produtos)
-   }
-   todosProdutos.push(novoProduto)
-   localStorage.produtos = JSON.stringify(todosProdutos)
+   addProdutos(novoProduto)
 }
 
+function addProdutos(novoProduto){
+    let todosProdutos
+    if(!localStorage.produtos) {
+        todosProdutos = []
+    } else {
+        todosProdutos = JSON.parse(localStorage.produtos)
+    }
+    todosProdutos.push(novoProduto)
+    localStorage.produtos = JSON.stringify(todosProdutos)
+}

@@ -24,7 +24,7 @@ input, select, button, textarea{
 }
 
 .add-cerv textarea{
-    width: 1300px;
+    width: 100%;
 }
 
 .add-cerv button {
