@@ -36,14 +36,14 @@
 <div class="container">
     <h2 class="text-center mt-3">Adicionar Cerveja</h2>
     <form class="add-cerv">
-        <input class="form-control" type="text" placeholder="Nome da Cerveja" id="nomeCerv">
+        <input class="form-control" type="text" placeholder="Nome da Cerveja" id="nomeCerv" autocomplete="off">
         <select class="form-control" id="tipoCerv">
           <option>Tipo da Cerveja</option>
           <option value="Larger">Larger</option>
           <option value="Ales">Ales</option>
           <option value="Lambics">Lambics</option>
         </select>
-        <textarea class="form-control" rows="3" placeholder="Descrição" id="descricao"></textarea>
+        <textarea class="form-control" rows="3" placeholder="Descrição" id="descricao" autocomplete="off"></textarea>
         <button type="button" class="btn btn-outline-dark" onclick="addCerv()">Adicionar</button>   
     </form>
 
