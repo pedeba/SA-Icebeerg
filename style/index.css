@@ -6,6 +6,7 @@
 
 body{
     font-family: Arial, Helvetica, sans-serif;
+    
 }
 
 img {
@@ -105,20 +106,21 @@ img {
 }
 
 .projetos {
-    height: 600px;
-    margin-top: 60px;
-    background: #f7f7f7;
+    height: 1200px;
+    background: #261E07;
     overflow-y: scroll;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.493);
+    padding: 20px;
 }
 
-.projetos::-webkit-scrollbar{
+.projetos::-webkit-scrollbar {
     width: 18px;
 }
 
-.projetos::-webkit-scrollbar-thumb{
-    background: #261E07;
-    border-right: 6px solid #8C793F;
+.projetos::-webkit-scrollbar-thumb {
+    background: #FFBB55;
+    border-left: 4px solid #261E07;
+    border-right: 4px solid #261E07;
 }
 
 .footer {
@@ -215,4 +217,57 @@ img {
 }
 
 
+.div-cerveja::after, .div-cerveja::before{
+    content: '';
+    display: table;
+    clear: both;
+}
 
+.div-cerveja{
+    background: #31270a;
+    padding: 5px;
+    border: 3px solid #eb862e;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.493);
+    margin-bottom: 20px;
+}
+
+.div-cerveja img {
+    width: 200px;
+    float: left;
+    margin-right: 20px;
+}
+
+.div-cerveja h3{
+    font-size: 30px;
+    font-family: monospace;
+    color: #eb862e;
+}
+
+.div-cerveja h2 {
+    font-size: 20px;
+    font-family: monospace;
+    color: white;
+    margin: 5px 0;
+}
+
+.div-cerveja p {
+    font-size: 17px;
+    font-family: monospace;
+    color: white;
+}
+
+.secao-cerv{
+    background: #31270a;
+    padding: 10px 0;
+}
+
+
+.cerv-anunciada{
+    text-align: center;
+    font-size: 35px;
+    color: #261E07;
+    font-family: monospace;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin: 30px;
+}

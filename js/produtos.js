@@ -10,9 +10,9 @@ function addCerv(){
         alert("Insira todas as informações")
     } else {
         cadastrarCerv(nomeCerv.value, tipoCerv.value, descricao.value)
-        nomeCerv.value = ''
-        tipoCerv.value = 'Tipo da Cerveja'
-        descricao.value = ''
+        nomeCerv.value=null;
+        descricao.value=null; 
+        tipoCerv.value= "Tipo da Cerveja"
     }
 }
 function cadastrarCerv(nome, tipo, descricao){
