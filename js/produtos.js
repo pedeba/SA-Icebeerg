@@ -4,7 +4,7 @@ let descricao = document.getElementById("descricao")
 let usuarios = JSON.parse(localStorage.users)
 let userLog = JSON.parse(localStorage.pessoalogada)
 
-
+//verificacao
 function addCerv(){
     if(nomeCerv.value == '' || tipoCerv.value == 'Tipo da Cerveja' || descricao.value ==''){
         alert("Insira todas as informações")
@@ -15,6 +15,7 @@ function addCerv(){
         tipoCerv.value= "Tipo da Cerveja"
     }
 }
+//cria nova cerveja
 function cadastrarCerv(nome, tipo, descricao){
     let novoProduto = {nome: nome, tipo: tipo, descricao: descricao}
     usuarios.forEach((user)=>{
@@ -23,6 +24,7 @@ function cadastrarCerv(nome, tipo, descricao){
         }
     })
 }
+//adiciona no localStorage
 function addLocalSorage(user, novoProduto){
    let produtosUser
    if(!user.produtos){
@@ -36,7 +38,7 @@ function addLocalSorage(user, novoProduto){
    localStorage.pessoalogada = JSON.stringify(user)
    addProdutos(novoProduto)
 }
-
+//cria nova chave produtos
 function addProdutos(novoProduto){
     let todosProdutos
     if(!localStorage.produtos) {
@@ -46,4 +48,5 @@ function addProdutos(novoProduto){
     }
     todosProdutos.push(novoProduto)
     localStorage.produtos = JSON.stringify(todosProdutos)
+    window.location.reload()
 }

@@ -44,46 +44,43 @@
           <option value="Lambics">Lambics</option>
         </select>
         <textarea class="form-control" rows="3" placeholder="Descrição" id="descricao" autocomplete="off"></textarea>
-        <button type="button" class="btn btn-outline-dark" onclick="addCerv()">Adicionar</button>   
+        <button type="button" class="btn btn-outline-dark" id="btn-add"onclick="addCerv()">Adicionar</button>   
     </form>
-
-          <table class="table mt-4">
-            <thead>
-              <tr>
-                <th scope="col">Nº</th>
-                <th scope="col">Nome</th>
-                <th scope="col">Tipo</th>
-                <th scope="col">Descrição</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Larger Beer</td>
-                <td>Larger</td>
-                <td>Cerveja fermentada e armazenada em baixas temperaturas. A fermentação da cerveja é feita pela levedura Saccharomyces pastorianus.</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Ales Beer</td>
-                <td>Ales</td>
-                <td>Cerveja produzida a partir de cevada maltada usando uma levedura que trabalha melhor em temperaturas mais elevadas.</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Lambics Beer</td>
-                <td>Lambics</td>
-                <td>Cerveja fabricado tradicionalmente pela região de Pajottenland, pela cervejaria e museu Brasserie Cantillon.</td>
-              </tr>
-            </tbody>
-          </table>
     </div>
+    <section class="secao-cerv">
+        
+      <div class="projetos container" id="meusprodutos">
+          
+      </div>
+  </section>
     <footer class="footer">
       <div class="container">
           <p>-Situação de Aprendizagem</p>
       </div>
   </footer>
+  <section class="modal-container" data-modal="container">
+    <div class="modal">
+        <button data-modal="fechar" class="fechar">X</button>
+        <form action="">
+            <p id="posicao"></p>
+            <h2>Editar Cerveja</h2>
+            <label for="nomeEdit">Nome</label>
+            <input type="text" for="nomeEdit"name="" id="nomeEdit" placeholder="Nome">
+            <label for="senha">Tipo da Cerveja</label>
+            <select class="form-control" id="tipoCervEdit">
+              <option>Tipo da Cerveja</option>
+              <option value="Larger">Larger</option>
+              <option value="Ales">Ales</option>
+              <option value="Lambics">Lambics</option>
+            </select>
+            <label for="descricao-edit">Descrição</label>
+            <textarea class="form-control" rows="3" placeholder="Descrição" id="descricao-edit" autocomplete="off"></textarea>
+            <button type="button" id="btnEditarDef">Concluir</button>
+        </form>
+    </div>
+</section>
     <script src="js/script.js"></script>
     <script src="js/produtos.js"></script>
+    <script src="js/editar-cerv.js"></script>
 </body>
 </html>
