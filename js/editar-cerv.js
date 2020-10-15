@@ -2,9 +2,13 @@ let btnadd = document.getElementById("btn-add")
 let lista = document.getElementById("meusprodutos")
 let modal = document.querySelector('.modal-container')
 let btnFecharModal = document.querySelector('[data-modal="fechar"]')
+let btnFecharModalExlcui = document.querySelector('.fecharExclui')
 let btnEditDef = document.getElementById("btnEditarDef")
+let btnExcluirDef = document.getElementById("btnExcluirDef")
+let modalExclui = document.querySelector(".excluirCerveja-modal")
 let userlog = JSON.parse(localStorage.pessoalogada)
 let produtos = JSON.parse(localStorage.produtos)
+
 function escreveReload(){
   for(let i = 0; i<userlog.produtos.length;i++){
     lista.appendChild(document.createElement('div')).classList.add('div-cerveja')
@@ -29,24 +33,30 @@ function btns(seletor, escrito){
     b.innerText = escrito
   })
 }
-//Editar
-let btnEditar = document.querySelectorAll('.div-cerveja .btn-edit')
 //MODAL
-function abrirModal(){
+let btnEditar = document.querySelectorAll('.div-cerveja .btn-edit')
+let btnExclui = document.querySelectorAll('.div-cerveja .btn-exclui')
+function abrirModal(modal){
   modal.classList.add('ativo')
 }
 
 function fecharModal(){
   modal.classList.remove('ativo')
+  modalExclui.classList.remove('ativo')
 }
 btnFecharModal.addEventListener('click', fecharModal)
+btnFecharModalExlcui.addEventListener('click', fecharModal)
 function cliqueforafechar(event){
   if(event.target === this){
       modal.classList.remove('ativo')
+      modalExclui.classList.remove('ativo')
   }
 }
 modal.addEventListener('click', cliqueforafechar)
+modalExclui.addEventListener('click', cliqueforafechar)
 //////////////////////////////////////////////
+
+//EDITAR CERVEJA
 let nome = document.getElementById("nomeEdit")
 let tipo = document.getElementById("tipoCervEdit")
 let desc = document.getElementById("descricao-edit")
@@ -61,7 +71,7 @@ function editarCerv(index){
 }
 btnEditar.forEach((btn, index)=>{
   btn.addEventListener('click', ()=>{
-    abrirModal()
+    abrirModal(modal)
     editarCerv(index)
   })
 })
@@ -95,6 +105,49 @@ function att(prod){
   console.log(prod)
 }
 
+
+//EXLUIR CERVEJA
+let posicaoExclui = document.getElementById("posicao-exclui")
+function excluirCerv(index){
+  posicaoExclui.innerText = index
+}
+
+btnExclui.forEach((btn, index)=>{
+  btn.addEventListener('click', ()=>{
+    abrirModal(modalExclui)
+    excluirCerv(index)
+  })
+})
+
+//EXCLUI CERVEJA DOS
+function excluirDef(){
+  usuarios.forEach((user)=>{
+    if(user.usuario == userlog.usuario){
+      user.produtos.forEach((prod, index)=>{
+        if(index == +posicaoExclui.innerText){
+          user.produtos.splice(user.produtos.indexOf(prod), 1)
+          produtosex(index)
+        }
+      })
+    }
+  })
+  function produtosex(index){
+    produtos.forEach((prod)=>{
+      if(prod.nome == userlog.produtos[index].nome && prod.descricao == userlog.produtos[index].descricao){
+        produtos.splice(produtos.indexOf(prod), 1)
+      }
+    })
+  }
+  userlog.produtos.forEach((prod, index)=>{
+    if(index == +posicaoExclui.innerText){
+      userlog.produtos.splice(userlog.produtos.indexOf(prod), 1)
+    }
+  })
+  attLocalStorage()
+  console.log(produtos)
+}
+btnExcluirDef.addEventListener("click", excluirDef)
+//ATTLOCALSTORAGE
 function attLocalStorage(){
   localStorage.users = JSON.stringify(usuarios)
   localStorage.pessoalogada = JSON.stringify(userlog)

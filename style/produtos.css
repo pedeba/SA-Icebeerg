@@ -216,3 +216,26 @@ input, select, button, textarea{
 .div-cerveja .btn-exclui, .div-cerveja .btn-edit{
     cursor: pointer;
 }
+
+#posicao-exclui{
+    color: #FFFFFF;
+}
+
+#btnExcluirDef{
+    border: none;
+    background: #261E07;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+#fraseexclui {
+    margin: 20px 0;
+}
+
+#btnExcluirDef:hover{
+    background: #fb5;
+    cursor: pointer;
+    transition: 0.2s;
+}
