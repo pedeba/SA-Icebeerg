@@ -2,6 +2,9 @@ const usuarioInput = window.document.getElementById("usuario")
 const senhaInput = window.document.getElementById("senha")
 const senhaInput2 = window.document.getElementById("senha2")
 const nomeInput = window.document.getElementById("nomecompleto")
+const telefoneInput = window.document.getElementById("telefone")
+const enderecoInput = window.document.getElementById("endereco")
+const emailInput = window.document.getElementById("email")
 const mensagem = window.document.getElementById("msgerro")
 let usuarios = JSON.parse(localStorage.users)
 mensagem.style.color = 'red'
@@ -12,24 +15,34 @@ function registro() {
     } else if (senhaInput.value !== senhaInput2.value) {
         mensagem.innerHTML = 'Os campos de senha estão diferentes.'
     } else {
-        cadastrar(usuarioInput.value, senhaInput.value, nomeInput.value)
+        cadastrar(usuarioInput.value, senhaInput.value, nomeInput.value, telefoneInput.value, enderecoInput.value, emailInput.value)
     }
 }
 
-function cadastrar(usuario, senha, nome){
-    let novoUser = {usuario: usuario, senha: senha, nome: nome}
+function cadastrar(usuario, senha, nome, telefone, endereco, email){
+    let novoUser = {usuario: usuario, senha: senha, nome: nome, telefone: telefone, endereco: endereco, email: email}
     let users = localStorage.getItem("users");
     if (users == null) {
         users = [];
     }else {
         users = JSON.parse(users);
     }
-    const repeteUser = users.some((item)=>{
+    let repeteUser = users.some((item)=>{
         return usuario == item.usuario
+    })
+    let repeteEmail = users.some((item)=>{
+        return email == item.email
+    })
+    let repeteTelefone = users.some((item)=>{
+        return telefone == item.telefone
     })
     if(repeteUser){
         mensagem.innerHTML = 'Este nome de usuário já foi registrado.'
-    } else {
+    } else if(repeteEmail){
+        mensagem.innerHTML = 'Este email já foi registrado.'
+    } else if(repeteTelefone){
+        mensagem.innerHTML = 'Este telefone já foi registrado.'  
+    }else {
         users.push(novoUser); 
         localStorage.users = JSON.stringify(users)
         window.location.href = 'loginfeito.html' 

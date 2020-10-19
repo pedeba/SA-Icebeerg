@@ -4,10 +4,16 @@ let nomeEditInput = document.getElementById("nomeEdit")
 let userEditInput = document.getElementById("userEdit")
 let pass1EditInput = document.getElementById("pass1Edit")
 let pass2EditInput = document.getElementById("pass2Edit")
+let emailEditInput = document.getElementById("emailEdit")
+let telefonEditInput = document.getElementById("telefoneEdit")
+let enderecoEditInput = document.getElementById("enderecoEdit")
 let msgerro = document.getElementById("msgerro")
-mostraDados.innerHTML=`Nome: ${userlog.nome} <br> Usuário: ${userlog.usuario} `
+mostraDados.innerHTML=`<b>Nome</b>: ${userlog.nome} <br> <b>Usuário</b>: ${userlog.usuario} <br> <b>E-mail</b>: ${userlog.email} <br> <b>Telefone</b>: ${userlog.telefone} <br> <b>Endereço</b>: ${userlog.endereco}<br> `
 nomeEditInput.value = userlog.nome
 userEditInput.value = userlog.usuario
+emailEditInput.value= userlog.email
+telefonEditInput.value=userlog.telefone
+enderecoEditInput.value=userlog.endereco
 
 function editarDados(){
     if (!nomeEditInput.value && !userEditInput.value){
@@ -16,19 +22,23 @@ function editarDados(){
     } else {
         usuarios.forEach((user)=>{
             if(user.usuario == userlog.usuario){
-                if(userEditInput.value){
-                    user.usuario = userEditInput.value
-                    userlog.usuario = userEditInput.value
-                }
-                if(nomeEditInput.value){
-                    user.nome = nomeEditInput.value
-                    userlog.nome = nomeEditInput.value
-                }  
+                editardado(user, userEditInput.value, 'usuario')
+                editardado(user, nomeEditInput.value, 'nome')
+                editardado(user, emailEditInput.value, 'email')
+                editardado(user, telefonEditInput.value, 'telefone')
+                editardado(user, enderecoEditInput.value, 'endereco')
             }
         })
         attLocalStorage()
         window.location.reload()  
     }
+}
+
+function editardado(user, inputvalue, prop){
+    if(inputvalue){
+        user[prop] = inputvalue
+        userlog[prop] = inputvalue
+    }    
 }
 
 function editarSenha() {
