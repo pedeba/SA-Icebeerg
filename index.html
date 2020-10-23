@@ -35,7 +35,15 @@
     
     <h1 class="cerv-anunciada">cervejas anunciadas</h1>
     <section class="secao-cerv">
-        
+        <div class="filtro container">
+            <select class="form-control" id="tipoCervEdit">
+                <option>Todos</option>
+                <option value="Larger">Larger</option>
+                <option value="Ales">Ales</option>
+                <option value="Lambics">Lambics</option>
+            </select>
+            <p>Filtrar por tipo:</p>
+        </div>
         <div class="projetos container" id="cervejas">
             
         </div>
@@ -46,6 +54,23 @@
             <p>-Situação de Aprendizagem</p>
         </div>
     </footer>
+    <section class="modal-container" data-modal="container">
+        <div class="modal">
+            <button data-modal="fechar" class="fechar">X</button>
+            <form action="">
+                <h2 id="nomeModal"></h2>
+                <p id="tipoModal"><span>Tipo: </span></p>
+                <p id="descModal"><span>Descrição: </span></p>
+                <div id="#contatar">
+                    <h3>Contatar</h3>
+                    <p id="cervejeiroModal"></p>
+                    <p id="emailModal"></p>
+                    <p id="telefoneModal"></p>
+                    <p id="enderecoModal"></p>
+                </div>
+            </form>
+        </div>
+    </section>
     <script src="js/script.js"></script>
     <script src="js/index.js"></script>
 </body>
