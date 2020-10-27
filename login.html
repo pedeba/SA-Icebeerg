@@ -8,17 +8,17 @@
 </head>
 <body>
     <main class="loginbg">
-        <div class="loginc">
+        <form class="loginc">
            <div class="login">
             <p class="semlogin">Ainda não possui login?<a href="registro.html">Cadastre-se</a></p>
             <h1>Fazer Login</h1>
             <div id="msgerro"></div>
+            <label for="usuario">Usuário</label>
             <input class="grid"type="text" placeholder="Usuário" id="usuario" autocomplete="off">
+            <label for="senha">Senha</label>
             <input class="grid"type="password" name="" placeholder="Senha" id="senha" >
-            <p class="check"><input type="checkbox" name="" id="checkbox">Mantenha-me conectado</p>
-            <a><button class="grid btn"type="submit" onclick="logar()">Entrar</button></a>
-           <a href="" class="esqueceu"><p>Esqueceu sua senha?</p></a>
-        </div>
+            <a><button class="grid btn"type="button" onclick="logar()">Entrar</button></a>
+           </form>
     </main>
 
 

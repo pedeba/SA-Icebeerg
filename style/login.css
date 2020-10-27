@@ -13,17 +13,22 @@ img {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #cecece;
+    background: #261E07;
     background-size: cover;
     background-attachment: fixed;
     background-position: 0 0;
     color: white;
 }
 
+label{
+    display: block;
+    font-size: 16px;
+}
+
 input{
-    border: 3px solid #8C793F;
+    border: 3px solid #eb862e;
     background: none;
-    color: black;
+    color: white;
     
 }
 
@@ -49,7 +54,7 @@ input{
 }
 
 .login a {
-    color: #D95043;
+    color: #eb862e;
 }
 
 .grid {width: calc(100%);}
@@ -59,23 +64,26 @@ input{
     text-align: center;
     font-weight: bold;
     margin: 40px 0 30px 0;
-    color: black;
+    color: white;
+    font-size: 30px;
 }
 
 .semlogin {
     text-align: right;
+    font-size: 16px;
 }
 
 
 .loginbg {
     width: 500px;
     margin: 0 auto;
-    background: #ffffff;
+    background: url(../img/logoopacidade.png) no-repeat 100% 0;
+    background-color:  #31270a;
     padding: 10px 0 30px 0;
     margin-top: 120px;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.493);
     border-radius: 15px;
-    border: 2px solid #8C793F;
+    border: 2px solid #eb862e;
 }
 
 .login input {
@@ -93,7 +101,7 @@ input{
 .btn {
     display: block;
     padding: 15px 10px;
-    background: #D95043;
+    background: #261E07;
     border-style: none;
     outline: none;
     border-radius: 10px;
@@ -103,37 +111,27 @@ input{
     margin-bottom: 20px;
     margin-top: 10px;
     font-size: 20px;
+    font-family: monospace;
+    letter-spacing: .1em;
 }
 
 .btn:hover {
     cursor: pointer;
-}
-
-
-.check {
-    margin: 0 10px;
-}
-
-.esqueceu {
-    margin-top: 30px;
-    text-align: center;
-}
-
-
-
-.esqueceu {
-    text-align: center;
+    background: #FFBB55;
+    transition: 0.5s;
 }
 
 .semlogin {
-    color: black;
+    color: white;
 }
 
-.check {
-    color: black;
-}
+
 
 #msgerro {
     color: red;
+    font-size: 16px;
 }
 
+body {
+    font-family: monospace;
+}

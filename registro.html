@@ -9,20 +9,27 @@
 </head>
 <body>
     <main class="loginbg">
-        <div class="loginc">
+        <form class="loginc">
            <div class="login">
             <h1>Cadastre-se</h1>
             <div id="msgerro"></div>
+            <label for="nomecompleto">Nome Completo</label>
             <input class="grid"type="text" placeholder="Nome completo" id="nomecompleto" >
+            <label for="usuario">Usuário</label>
             <input class="grid"type="text" placeholder="Usuário" id="usuario" autocomplete="off">
+            <label for="email">E-mail</label>
             <input class="grid"type="email" placeholder="E-mail" id="email" autocomplete="off">
-            <input class="grid"type="tel" placeholder="Telefone" id="telefone" autocomplete="off">
+            <label for="telefone">Telefone</label>
+            <input class="grid"type="number" placeholder="(xx)xxxxx-xxxx" id="telefone" autocomplete="off">
+            <label for="endereco">Endereço</label>
             <input class="grid"type="text" placeholder="Endereço" id="endereco" autocomplete="off">
+            <label for="senha">Senha</label>
             <input class="grid"type="password" name="" placeholder="Senha" id="senha" >
+            <label for="senha2">Confirmar Senha</label>
             <input class="grid"type="password" name="" placeholder="Confirmar senha" id="senha2" >
             <a><button class="grid btn"type="submit" onclick="registro()">Cadastrar</button></a>
             </div>
-        </div>
+        </form>
     </main>
 
 
