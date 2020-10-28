@@ -17,10 +17,11 @@ function addCerv(){
 }
 //cria nova cerveja
 function cadastrarCerv(nome, tipo, descricao){
-    let novoProduto = {nome: nome, tipo: tipo, descricao: descricao}
+    let novoProduto = {nome: nome, tipo: tipo, descricao: descricao, visualizacao: 0}
     usuarios.forEach((user)=>{
         if(user.usuario == userLog.usuario){
             novoProduto.cervejeiro = user.nome
+            novoProduto.usercervejeiro = user.usuario
             addLocalSorage(user, novoProduto)
         }
     })

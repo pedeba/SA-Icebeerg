@@ -264,12 +264,13 @@ img {
 
 .cerv-anunciada{
     text-align: center;
-    font-size: 35px;
+    font-size: 45px;
     color: #261E07;
     font-family: monospace;
     text-transform: uppercase;
     letter-spacing: .1em;
     margin: 30px;
+    font-weight: bold;
 }
 
 .div-cerveja .btn-info{

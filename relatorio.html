@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relatorio</title>
+  <link rel="stylesheet" href="style/index.css">
+  <link rel="stylesheet" href="style/dados.css">
+  <link rel="stylesheet" href="style/relatorio.css">
+</head>
+<body>
+  <nav class="menu">
+    <div class="container">
+        <a href="index.html"><img src="img/logo.png" alt="logo" class="logo"></a>
+        <div class="user dropdown" id="dropdown">
+            <div id="usuario" onclick="openDados()">
+                <img src="img/user.svg" alt="user">
+                <p class="usuario-logado" id="usuario-logado"></p>
+            </div>
+            <ul class="dropdown-menu" id="dropdownmenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="adicionar-cerveja.html">Meus Produtos</a></li>
+                <li><a href="dados.html">Meus Dados</a></li>
+                <li><a href="relatorio.html">Relatório</a></li>
+                <li onclick="sair()"><a href="login.html">Sair</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="titulo-secao">
+    <div class="container">
+        <h2>RELATÓRIO</h2>
+    </div>
+</div>
+<section id="relatorio">
+    <h1>Acompanhe a popularidade das suas cervejas</h1>
+    <div class="container div-rel">
+        
+        <table id="table">
+            <tr class="cabeca-table">
+                <th>Cerveja</th>
+                <th>Visualizações</th>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<script src="js/script.js"></script>
+<script src="js/relatorio.js"></script>
+</body>
+</html>

@@ -65,7 +65,7 @@ function salvaVisualizacao(index){
     }
     let arraycervejeiro = []
     produtos.forEach((prod)=>{
-        if(prod.cervejeiro !== userlog.nome){
+        if(prod.usercervejeiro !== userlog.usuario){
             arraycervejeiro.push(prod)
         }
     })
