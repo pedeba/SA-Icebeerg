@@ -8,6 +8,7 @@ let emailEditInput = document.getElementById("emailEdit")
 let telefonEditInput = document.getElementById("telefoneEdit")
 let enderecoEditInput = document.getElementById("enderecoEdit")
 let msgerro = document.getElementById("msgerro")
+let produtos = JSON.parse(localStorage.produtos)
 mostraDados.innerHTML=`<b>Nome</b>: ${userlog.nome} <br> <b>Usuário</b>: ${userlog.usuario} <br> <b>E-mail</b>: ${userlog.email} <br> <b>Telefone</b>: ${userlog.telefone} <br> <b>Endereço</b>: ${userlog.endereco}<br> `
 nomeEditInput.value = userlog.nome
 userEditInput.value = userlog.usuario
@@ -20,6 +21,26 @@ function editarDados(){
         msgerro.innerText = 'Você preencheu nenhum campo.'
         msgerro.style.opacity = '1'
     } else {
+        produtos.forEach((prod)=>{
+            prod.vistopor.forEach((user, index, array)=>{
+                if(user == userlog.usuario){
+                    array[index] = userEditInput.value
+                    console.log(prod.vistopor)
+                }
+            })
+        })
+        usuarios.forEach((user)=>{
+            user.produtos.forEach((prod)=>{
+                if(prod.usercervejeiro == userlog.usuario){
+                    prod.usercervejeiro = userEditInput.value
+                }
+            })
+        })
+        produtos.forEach((prod)=>{
+            if(prod.usercervejeiro == userlog.usuario){
+                prod.usercervejeiro = userEditInput.value
+            }
+        })
         usuarios.forEach((user)=>{
             if(user.usuario == userlog.usuario){
                 editardado(user, userEditInput.value, 'usuario')
@@ -29,10 +50,13 @@ function editarDados(){
                 editardado(user, enderecoEditInput.value, 'endereco')
             }
         })
+
         attLocalStorage()
-        window.location.reload()  
+        window.location.reload()
+        
     }
 }
+
 
 function editardado(user, inputvalue, prop){
     if(inputvalue){
@@ -66,5 +90,6 @@ function editarSenha() {
 
 function attLocalStorage(){
     localStorage.users = JSON.stringify(usuarios)
-    localStorage.pessoalogada = JSON.stringify(userlog)  
+    localStorage.pessoalogada = JSON.stringify(userlog)
+    localStorage.produtos = JSON.stringify(produtos)  
 }

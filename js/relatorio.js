@@ -6,6 +6,7 @@ let produtosuser = produtos.filter((prod)=>{
     return prod
   }
 })
+
 for(let i =0; i<produtosuser.length; i++){
   table.appendChild(document.createElement('tr'))
 }

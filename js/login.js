@@ -20,7 +20,7 @@ function registro() {
 }
 
 function cadastrar(usuario, senha, nome, telefone, endereco, email){
-    let novoUser = {usuario: usuario, senha: senha, nome: nome, telefone: telefone, endereco: endereco, email: email}
+    let novoUser = {usuario: usuario, senha: senha, nome: nome, telefone: telefone, endereco: endereco, email: email, produtos: []}
     let users = localStorage.getItem("users");
     if (users == null) {
         users = [];

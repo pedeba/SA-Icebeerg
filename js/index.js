@@ -44,10 +44,11 @@ function exibeInfo(index){
     nomeModal.innerText = produtos[index].nome
     tipoModal.innerHTML = `<b>Tipo: </b>${produtos[index].tipo}`
     descModal.innerHTML = `<b>Descrição: </b>${produtos[index].descricao}`
-    cervejeiroModal.innerHTML = `<b>Cervejeiro: </b>${produtos[index].cervejeiro}`
+    
     usuarios.forEach((user)=>{
         user.produtos.forEach((prod)=>{
-            if(produtos[index].nome == prod.nome){
+            if(produtos[index].usercervejeiro == prod.usercervejeiro){
+                cervejeiroModal.innerHTML = `<b>Cervejeiro: </b>${user.nome}`
                 emailModal.innerHTML = `<b>E-mail: </b>${user.email}`
                 telefoneModal.innerHTML = `<b>Telefone: </b>${user.telefone}`
                 enderecoModal.innerHTML= `<b>Endereco: </b>${user.endereco}`
