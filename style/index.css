@@ -417,3 +417,44 @@ img {
 .div-cerveja.esconde{
     display: none;
 }
+
+.redes h2{
+    font-size: 35px;
+    color: #261E07;
+    font-family: monospace;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.redes img{
+    border: 4px solid #fb5;
+    padding: 8px;
+    width: 60px;
+}
+
+.redes p {
+    font-family: monospace;
+    color: #261E07;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.redes span{
+    color: #eb862e;
+}
+
+.redes h2::after{
+    content: '';
+    display: block;
+    height: 4px;
+    width: 100px;
+    background: #261E07;
+    margin: 5px 0;
+}
+
+.redes div{
+    width: 300px;
+}
+

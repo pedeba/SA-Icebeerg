@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastre-se</title>
     <link rel="stylesheet" href="./style/logingeral.css">
-    
+    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mask.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#telefone").mask("(00) 00000-0000")
+        })
+    </script>
 </head>
 <body>
     <main class="loginbg">
@@ -14,13 +20,13 @@
             <h1>Cadastre-se</h1>
             <div id="msgerro"></div>
             <label for="nomecompleto">Nome Completo</label>
-            <input class="grid"type="text" placeholder="Nome completo" id="nomecompleto" >
+            <input class="grid"type="text" placeholder="Nome completo" id="nomecompleto" autocomplete="off">
             <label for="usuario">Usuário</label>
             <input class="grid"type="text" placeholder="Usuário" id="usuario" autocomplete="off">
             <label for="email">E-mail</label>
             <input class="grid"type="email" placeholder="E-mail" id="email" autocomplete="off">
             <label for="telefone">Telefone</label>
-            <input class="grid"type="number" placeholder="(xx)xxxxx-xxxx" id="telefone" autocomplete="off">
+            <input class="grid"type="text" placeholder="(xx)xxxxx-xxxx" id="telefone" autocomplete="off">
             <label for="endereco">Endereço</label>
             <input class="grid"type="text" placeholder="Endereço" id="endereco" autocomplete="off">
             <label for="senha">Senha</label>
